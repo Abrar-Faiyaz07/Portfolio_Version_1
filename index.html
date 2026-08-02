@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abrar Faiyaz — CSE @ IUT · AI, Robotics & Software</title>
+<meta name="description" content="Abrar Faiyaz — Computer Science & Engineering student at Islamic University of Technology, Bangladesh. AI/ML, generative AI, robotics, embedded systems and competitive programming. Projects, hardware builds and photography.">
+<meta name="author" content="Abrar Faiyaz">
+<meta name="theme-color" content="#0A0E1A">
+<link rel="canonical" href="https://abrar-faiyaz07.github.io/Portfolio_Version_1/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abrar Faiyaz — CSE @ IUT · AI, Robotics & Software">
+<meta property="og:description" content="An AI-focused CSE student who builds like a senior engineer. Projects, hardware builds, competitive programming and photography.">
+<meta property="og:image" content="https://abrar-faiyaz07.github.io/Portfolio_Version_1/uploads/Photo_1_Main.jpeg">
+<meta property="og:url" content="https://abrar-faiyaz07.github.io/Portfolio_Version_1/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abrar Faiyaz — CSE @ IUT">
+<meta name="twitter:description" content="AI/ML · Robotics · Competitive Programming. Built from scratch, no framework.">
+<meta name="twitter:image" content="https://abrar-faiyaz07.github.io/Portfolio_Version_1/uploads/Photo_1_Main.jpeg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0E1A'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='54' font-weight='700' fill='%234FE3C1' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abrar Faiyaz",
+  "url": "https://abrar-faiyaz07.github.io/Portfolio_Version_1/",
+  "email": "mailto:abrarsamin04@gmail.com",
+  "nationality": "Bangladeshi",
+  "birthDate": "2005-08-15",
+  "jobTitle": "Computer Science & Engineering Student",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "Islamic University of Technology" },
+  "alumniOf": { "@type": "EducationalOrganization", "name": "Ibne Taimiya School and College" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Cumilla", "addressCountry": "BD" },
+  "knowsAbout": ["Artificial Intelligence","Machine Learning","Generative AI","Prompt Engineering","Robotics","Embedded Systems","Competitive Programming","C","C++","Python","Java"],
+  "sameAs": ["https://github.com/Abrar-Faiyaz07","https://www.linkedin.com/in/abrar-faiyaz-049056301","https://www.instagram.com/abrar_faiyaz_samin/"]
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ── Loading screen (first visit only, skippable) ───────────────────── -->
+<div id="loader" aria-hidden="true">
+  <svg class="monogram" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+    <path class="mono-stroke" d="M22 96 L60 24 L98 96" />
+    <path class="mono-stroke" d="M38 72 L82 72" />
+  </svg>
+  <div class="loader-name">Abrar Faiyaz</div>
+  <div class="loader-tag">CSE @ Islamic University of Technology</div>
+  <div class="loader-track"><div class="loader-fill"></div></div>
+  <button id="loader-skip" class="loader-skip" type="button">skip →</button>
+</div>
+
+<!-- ── Ambient layers ─────────────────────────────────────────────────── -->
+<div class="mesh" aria-hidden="true">
+  <span class="mesh-blob mesh-1"></span>
+  <span class="mesh-blob mesh-2"></span>
+  <span class="mesh-blob mesh-3"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div id="cursor-glow" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="scanline" aria-hidden="true"></div>
+<div id="progress-rail" aria-hidden="true"><span id="progress-fill"></span></div>
+<div id="toast-stack" role="status" aria-live="polite"></div>
+
+<!-- ── Fun Mode: Fish Climb overlay ───────────────────────────────────── -->
+<canvas id="fun-canvas" aria-hidden="true"></canvas>
+<div id="fun-hud" role="status">
+  <span class="fun-hint"><kbd>A</kbd><kbd>D</kbd> move · <kbd>Space</kbd> jump · <kbd>S</kbd> drop</span>
+  <span class="fun-depth">depth <b id="fun-progress">0%</b></span>
+  <button id="fun-exit-btn" type="button">exit ✕</button>
+</div>
+<div id="fun-win-overlay" role="dialog" aria-modal="true" aria-labelledby="fun-win-title">
+  <div class="fun-win-card">
+    <div class="fun-win-emoji">🐟</div>
+    <h3 id="fun-win-title">You swam the whole portfolio.</h3>
+    <div class="fun-win-actions">
+      <button id="fun-restart-btn" class="btn btn-primary" type="button">Play again</button>
+      <button id="fun-win-exit-btn" class="btn btn-ghost" type="button">Exit</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Photo lightbox ─────────────────────────────────────────────────── -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="lb-close" class="lb-btn lb-close" type="button" aria-label="Close">✕</button>
+  <button id="lb-prev" class="lb-btn lb-prev" type="button" aria-label="Previous photo">‹</button>
+  <img id="lb-img" alt="">
+  <button id="lb-next" class="lb-btn lb-next" type="button" aria-label="Next photo">›</button>
+  <div id="lb-caption"></div>
+</div>
+
+<!-- ── Contact modal ──────────────────────────────────────────────────── -->
+<div id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="cm-title">
+  <div class="cm-box glass-strong">
+    <div class="cm-form-view">
+      <div class="cm-head">
+        <div>
+          <p class="mono-label">/ say hi</p>
+          <h3 id="cm-title">Let's build something together</h3>
+        </div>
+        <button id="modal-close" class="cm-x" type="button" aria-label="Close dialog">✕</button>
+      </div>
+      <p class="cm-sub">Or email me directly at
+        <button class="copy-email link-inline" data-email="abrarsamin04@gmail.com" type="button">abrarsamin04@gmail.com <span class="copy-hint">copy</span></button>
+      </p>
+      <form id="contact-form" novalidate>
+        <div class="cm-row">
+          <label class="field"><span>Name</span><input id="f-name" name="name" autocomplete="name" required></label>
+          <label class="field"><span>Email</span><input id="f-email" name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <label class="field"><span>Subject</span><input id="f-subject" name="subject" required></label>
+        <label class="field"><span>Message</span><textarea id="f-message" name="message" rows="4" required></textarea></label>
+        <p class="cm-err" id="f-error" role="alert"></p>
+        <button type="submit" class="btn btn-primary btn-block" id="f-submit">Send message <span class="btn-arrow">→</span></button>
+        <p class="cm-note">This form stores messages in your browser only &mdash; there is no backend yet. Email remains the reliable route.</p>
+      </form>
+    </div>
+    <div class="cm-success">
+      <div class="cm-check">✓</div>
+      <h3>Message saved</h3>
+      <p id="thanks-msg">Thanks — I'll get back to you soon.</p>
+      <button id="modal-close-2" class="btn btn-ghost" type="button">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Navigation ─────────────────────────────────────────────────────── -->
+<header id="navbar">
+  <a href="#home" class="logo" id="logo">
+    <span class="logo-mark">A</span>
+    <span class="logo-text">abrar<span class="logo-dot">.</span>faiyaz</span>
+  </a>
+
+  <nav class="nav-links" id="nav-links" aria-label="Section navigation">
+    <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+    <a href="#about" class="navlink">/about</a>
+    <a href="#education" class="navlink">/education</a>
+    <a href="#experience" class="navlink">/experience</a>
+    <a href="#projects" class="navlink">/projects</a>
+    <a href="#skills" class="navlink">/skills</a>
+    <a href="#hardware" class="navlink">/hardware</a>
+    <a href="#contact" class="navlink">/contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <div class="icon-links">
+      <button class="icon-btn copy-email" data-email="abrarsamin04@gmail.com" type="button" title="Copy email" aria-label="Copy email address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3 6.5l9 6 9-6"/></svg>
+      </button>
+      <a class="icon-btn" href="https://github.com/Abrar-Faiyaz07" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub profile">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/abrar-faiyaz-049056301" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.6 5.4H.5V15h3.1V5.4zM2 4.1c1 0 1.7-.7 1.7-1.6C3.7 1.6 3 1 2 1 1 1 .3 1.6.3 2.5c0 .9.7 1.6 1.7 1.6zM15.5 15h-3.1V9.9c0-1.3-.5-2.2-1.6-2.2-.9 0-1.4.6-1.6 1.2-.1.2-.1.5-.1.8V15H5.9s.1-8.9 0-9.6H9v1.4c.4-.7 1.2-1.6 2.8-1.6 2.1 0 3.6 1.3 3.6 4.2V15z"/></svg>
+      </a>
+    </div>
+    <button id="theme-toggle" class="icon-btn" type="button" title="Toggle theme" aria-label="Toggle colour theme">
+      <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+    <a href="resume.pdf" class="btn btn-outline btn-sm" download>Resume</a>
+    <button id="fun-toggle" class="btn btn-fun btn-sm" type="button" aria-pressed="false"><span id="fun-dot"></span>Fun Mode</button>
+    <button id="menu-toggle" class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-sheet" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ── Mobile sheet ───────────────────────────────────────────────────── -->
+<div id="mobile-sheet" class="glass-strong" role="dialog" aria-modal="true" aria-label="Menu">
+  <nav aria-label="Mobile navigation">
+    <a href="#about">/about</a>
+    <a href="#education">/education</a>
+    <a href="#experience">/experience</a>
+    <a href="#projects">/projects</a>
+    <a href="#skills">/skills</a>
+    <a href="#hardware">/hardware</a>
+    <a href="#problem-solving">/problem-solving</a>
+    <a href="#photography">/photography</a>
+    <a href="#roadmap">/roadmap</a>
+    <a href="#contact">/contact</a>
+  </nav>
+  <a href="resume.pdf" class="btn btn-primary btn-block" download>Download resume</a>
+</div>
+
+<main id="main">
+
+<!-- ══ HERO ═══════════════════════════════════════════════════════════ -->
+<section id="home" aria-labelledby="hero-name">
+  <div class="hero-inner container">
+    <div class="hero-copy">
+      <p class="hero-badge"><span class="dot"></span>CSE @ Islamic University of Technology · Bangladesh</p>
+
+      <p class="hero-hi mono-label">hi, abrar here.</p>
+
+      <h1 id="hero-name" class="hero-name">
+        <span class="split" data-split="Abrar">Abrar</span>
+        <span class="split accent-gradient" data-split="Faiyaz">Faiyaz</span>
+      </h1>
+
+      <p class="hero-role mono-label" aria-label="I build software, hardware and games">
+        <span class="type-prefix">I build&nbsp;</span><span id="type-target"></span><span class="caret" aria-hidden="true"></span>
+      </p>
+
+      <p class="hero-lead">
+        Second-year Computer Science &amp; Engineering student focused on
+        <strong>AI/ML and generative AI</strong> — with a
+        parallel focus on robotics, embedded systems and competitive
+        programming. I learn by building: games in C, engines in Python,
+        instrumentation on a breadboard.
+      </p>
+
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg magnetic" id="open-contact" type="button">
+          <span class="wave">👋</span> Let's build something
+        </button>
+        <a class="btn btn-ghost btn-lg magnetic" href="#projects">See the work <span class="btn-arrow">↓</span></a>
+      </div>
+
+      <dl class="hero-stats">
+        <div><dt>Projects shipped</dt><dd data-count="9">0</dd></div>
+        <div><dt>IUPC rank (team)</dt><dd data-count="26" data-prefix="#">0</dd></div>
+        <div><dt>Certificates</dt><dd data-count="3">0</dd></div>
+        <div><dt>Languages coded</dt><dd data-count="5">0</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-visual">
+      <div class="portrait-frame" id="portrait-tilt">
+        <canvas id="particle-portrait" aria-hidden="true"></canvas>
+        <img id="portrait-img" src="uploads/Photo_1_Main.jpeg" alt="Portrait of Abrar Faiyaz">
+        <span class="frame-corner tl"></span><span class="frame-corner tr"></span>
+        <span class="frame-corner bl"></span><span class="frame-corner br"></span>
+      </div>
+      <span class="float-pill pill-dob">15 · 08 · 2005</span>
+      <span class="float-pill pill-year">2nd year · CSE</span>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+    <span class="cue-track"><span class="cue-dot"></span></span>
+    <span class="mono-label">scroll</span>
+  </a>
+</section>
+
+<!-- ══ ABOUT ══════════════════════════════════════════════════════════ -->
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">01</span> / about</p>
+      <h2 id="about-title">Learning by shipping — software and hardware alike.</h2>
+      <span class="hairline"></span>
+    </header>
+
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="body-lg splitwords" data-reveal>
+          I'm pursuing a BSc in Computer Science &amp; Engineering at the Islamic
+          University of Technology, where my focus has settled on artificial
+          intelligence, machine learning and generative AI, alongside the
+          robotics and embedded work that first pulled me into engineering.
+        </p>
+        <p class="body" data-reveal>
+          I sit on the Research &amp; Development Panel of the
+          <strong>IUT Robotics Society</strong> and I'm a General Executive Member
+          of the <strong>Al Biruni Research Society</strong>. Alongside coursework I
+          write games from scratch, build recommendation engines using only the
+          standard library, and practise algorithms because the fundamentals carry
+          everything else.
+        </p>
+        <p class="body" data-reveal>
+          The approach is consistent: build it, break it, understand why it broke.
+          This site is the record of that process.
+        </p>
+
+        <div class="stack-block" data-reveal>
+          <p class="mono-label stack-label">technologies I work with</p>
+          <div class="logo-marquee">
+            <ul class="logo-track" id="stack-list"></ul>
+          </div>
+        </div>
+
+        <div class="stack-block" data-reveal>
+          <p class="mono-label stack-label">currently exploring</p>
+          <div class="logo-marquee reverse">
+            <ul class="logo-track" id="explore-list"></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="about-side">
+        <figure class="about-photo unmask" data-reveal>
+          <img src="uploads/about-photo.jpg" alt="Abrar Faiyaz photographed at the beach" loading="lazy">
+          
+        </figure>
+        <div class="mini-cards">
+          <div class="mini-card tilt" data-reveal><span class="mini-big">R&amp;D</span><span class="mini-sub">Panel · IUT Robotics Society</span></div>
+          <div class="mini-card tilt" data-reveal><span class="mini-big">3</span><span class="mini-sub">languages spoken</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EDUCATION TIMELINE ═════════════════════════════════════════════ -->
+<section id="education" class="section" aria-labelledby="edu-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">02</span> / education</p>
+      <h2 id="edu-title">The path so far</h2>
+      <span class="hairline"></span>
+    </header>
+    <ol class="timeline" id="timeline">
+      <span class="tl-rail" aria-hidden="true"><span class="tl-rail-fill" id="tl-fill"></span></span>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE TABS ════════════════════════════════════════════════ -->
+<section id="experience" class="section" aria-labelledby="exp-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">03</span> / experience</p>
+      <h2 id="exp-title">Where I've been involved</h2>
+      <span class="hairline"></span>
+    </header>
+    <div class="exp-wrap" data-reveal>
+      <div class="exp-tabs" role="tablist" aria-label="Organisations" id="exp-tabs">
+        <span class="exp-indicator" id="exp-indicator" aria-hidden="true"></span>
+      </div>
+      <div class="exp-panels" id="exp-panels"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ═══════════════════════════════════════════════════════ -->
+<section id="projects" class="section" aria-labelledby="proj-title">
+  <div class="container">
+    <header class="sec-head sec-head-row" data-reveal>
+      <div>
+        <p class="mono-label"><span class="sec-num">04</span> / projects</p>
+        <h2 id="proj-title">Selected work</h2>
+      </div>
+      <a class="btn btn-outline" href="https://github.com/Abrar-Faiyaz07?tab=repositories" target="_blank" rel="noopener">All repositories <span class="btn-arrow">↗</span></a>
+    </header>
+
+    <div class="carousel" id="carousel" role="region" aria-label="Featured projects" tabindex="0" data-reveal>
+      <div class="carousel-media" id="slide-bg"></div>
+      <div class="carousel-scrim"></div>
+      <div class="carousel-noise"></div>
+      <button class="car-arrow prev" id="carousel-prev" type="button" aria-label="Previous project">‹</button>
+      <button class="car-arrow next" id="carousel-next" type="button" aria-label="Next project">›</button>
+      <div class="carousel-info">
+        <p class="mono-label" id="slide-tag"></p>
+        <h3 id="slide-title"></h3>
+        <p class="carousel-desc" id="slide-desc"></p>
+        <a class="btn btn-primary btn-sm" id="slide-link" href="#" target="_blank" rel="noopener">Open repo <span class="btn-arrow">↗</span></a>
+      </div>
+      <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Choose project"></div>
+      <div class="carousel-timer" id="carousel-timer"></div>
+    </div>
+
+    <div class="marquee" id="marquee-wrap" aria-hidden="true"><div class="marquee-track" id="marquee-track"></div></div>
+
+    <div class="filters" id="filters" role="tablist" aria-label="Filter projects" data-reveal></div>
+    <div class="project-grid" id="project-grid"></div>
+  </div>
+</section>
+
+<!-- ══ SKILLS + CERTIFICATES ══════════════════════════════════════════ -->
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">05</span> / skills</p>
+      <h2 id="skills-title">Toolbox &amp; credentials</h2>
+      <span class="hairline"></span>
+    </header>
+
+    <div class="skills-grid">
+      <div class="skill-bars" id="skill-bars" data-reveal></div>
+      <div class="tech-cloud" id="tech-cloud" data-reveal></div>
+    </div>
+
+    <p class="mono-label cert-label" data-reveal>/ certificates</p>
+    <div class="cert-grid" id="cert-grid"></div>
+  </div>
+</section>
+
+<!-- ══ HARDWARE ═══════════════════════════════════════════════════════ -->
+<section id="hardware" class="section" aria-labelledby="hw-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">06</span> / hardware</p>
+      <h2 id="hw-title">The machine &amp; the breadboard</h2>
+      <span class="hairline"></span>
+    </header>
+    <p class="sec-lead" data-reveal>What I build on, and what I have built with the R&amp;D Panel.</p>
+
+    <div class="hw-grid">
+      <div class="flip-outer" data-reveal>
+        <div class="flip-inner" id="pc-flip" tabindex="0" role="button" aria-label="Flip to see PC specifications">
+          <div class="flip-face front">
+            <div class="flip-media" id="pc-media">
+              <div class="media-placeholder"><span>⌨</span><p>Drop a photo at<br><code>uploads/pc-setup.jpg</code></p></div>
+            </div>
+            <div class="flip-text">
+              <p class="mono-label">/ my setup</p>
+              <h3>Ryzen 5 7600X build</h3>
+              <p>Primary workstation for coursework, compilation and project work. Flip for the full spec sheet →</p>
+            </div>
+          </div>
+          <div class="flip-face back">
+            <p class="mono-label">/ specification</p>
+            <div id="pc-specs"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-outer" data-reveal>
+        <div class="flip-inner" id="arduino-flip" tabindex="0" role="button" aria-label="Flip to see Arduino certificate">
+          <div class="flip-face front">
+            <div class="flip-media"><img src="uploads/pasted-1784336281298-0.jpg" alt="Arduino workbench with components" loading="lazy"></div>
+            <div class="flip-text">
+              <p class="mono-label">/ arduino</p>
+              <h3>Robotics workshop build</h3>
+              <p>Basic Arduino &amp; Robotics with IEEE RAS IUT SBC. Flip for the certificate →</p>
+            </div>
+          </div>
+          <div class="flip-face back cert-face">
+            <img src="uploads/ArduinoCertificate.jpg" alt="Basic Arduino and Robotics workshop certificate" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROBLEM SOLVING ════════════════════════════════════════════════ -->
+<section id="problem-solving" class="section" aria-labelledby="ps-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">07</span> / problem solving</p>
+      <h2 id="ps-title">Where the fundamentals get sharpened</h2>
+      <span class="hairline"></span>
+    </header>
+    <div class="cp-grid" id="cp-grid"></div>
+  </div>
+</section>
+
+<!-- ══ PHOTOGRAPHY ════════════════════════════════════════════════════ -->
+<section id="photography" class="section" aria-labelledby="photo-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">08</span> / photography</p>
+      <h2 id="photo-title">A few frames between classes</h2>
+      <span class="hairline"></span>
+    </header>
+    <div class="photo-grid" id="photo-grid"></div>
+  </div>
+</section>
+
+<!-- ══ ROADMAP ════════════════════════════════════════════════════════ -->
+<section id="roadmap" class="section" aria-labelledby="road-title">
+  <div class="container">
+    <header class="sec-head" data-reveal>
+      <p class="mono-label"><span class="sec-num">09</span> / roadmap</p>
+      <h2 id="road-title">What's next — honestly</h2>
+      <span class="hairline"></span>
+    </header>
+    <p class="sec-lead" data-reveal>Nothing on this site is marked &ldquo;coming soon.&rdquo; This section is where I state what is still ahead.</p>
+    <div class="roadmap-scroll" id="roadmap-scroll"><div class="roadmap-track" id="roadmap-track"></div></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════════════════════ -->
+<section id="contact" class="section section-contact" aria-labelledby="contact-title">
+  <div class="container contact-inner">
+    <p class="mono-label" data-reveal><span class="sec-num">10</span> / contact</p>
+    <h2 id="contact-title" class="contact-title" data-reveal>Got something worth building?</h2>
+    <p class="contact-lead" data-reveal>Internships, research assistantships, team projects, or just a good problem — my inbox is open.</p>
+    <div class="contact-actions" data-reveal>
+      <button class="btn btn-primary btn-xl magnetic" id="contact-cta" type="button">Say hi <span class="btn-arrow">→</span></button>
+      <button class="btn btn-ghost btn-xl magnetic copy-email" data-email="abrarsamin04@gmail.com" type="button">abrarsamin04@gmail.com</button>
+    </div>
+    <a href="resume.pdf" class="text-cta" download id="resume-dl">Download the full resume (PDF) <span class="btn-arrow">↓</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">A</span>
+      <p class="footer-name">Abrar Faiyaz</p>
+      <p class="footer-tag mono-label">CSE @ IUT · Cumilla → Gazipur, Bangladesh</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div><p class="mono-label">site</p><a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a></div>
+      <div><p class="mono-label">more</p><a href="#skills">Skills</a><a href="#hardware">Hardware</a><a href="#photography">Photography</a><a href="#roadmap">Roadmap</a></div>
+      <div><p class="mono-label">elsewhere</p>
+        <a href="https://github.com/Abrar-Faiyaz07" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/abrar-faiyaz-049056301" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/abrar_faiyaz_samin/" target="_blank" rel="noopener">Instagram</a>
+        <button class="copy-email linkish" data-email="abrarsamin04@gmail.com" type="button">Email</button>
+      </div>
+    </nav>
+  </div>
+  <div class="container footer-base">
+    <p>© <span id="year">2026</span> Abrar Faiyaz — built by hand, no framework.</p>
+    <p class="mono-label">HTML · CSS · vanilla JavaScript · no dependencies</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
