@@ -636,7 +636,10 @@ function initPortraitParticles() {
   const canvas = $('#particle-portrait');
   const frame = $('#portrait-tilt');
   const img = $('#portrait-img');
-  if (!canvas || REDUCED || !FINE_POINTER) return;
+  // Runs on touch devices too — the portrait is the hero's signature moment, and
+  // gating it on a fine pointer left phones looking at a plain photo. Interaction
+  // comes from touch instead; the IntersectionObserver still parks it off-screen.
+  if (!canvas || REDUCED) return;
 
   const CHARS = ' .:-=+*#%@'.split('');
   const ctx = canvas.getContext('2d');
@@ -757,16 +760,26 @@ function initPortraitParticles() {
     setTimeout(ready, 120);
   }
 
-  frame.addEventListener('mousemove', (e) => {
+  const track = (clientX, clientY) => {
     const r = frame.getBoundingClientRect();
-    mouse.tx = e.clientX - r.left;
-    mouse.ty = e.clientY - r.top;
+    mouse.tx = clientX - r.left;
+    mouse.ty = clientY - r.top;
     mouse.active = true;
-  });
-  frame.addEventListener('mouseleave', () => {
+  };
+  const release = () => {
     mouse.active = false;
     mouse.tx = -9999; mouse.ty = -9999;
-  });
+  };
+
+  frame.addEventListener('mousemove', (e) => track(e.clientX, e.clientY));
+  frame.addEventListener('mouseleave', release);
+
+  // Touch: drag a finger across the portrait to scatter the glyphs. Passive, so
+  // dragging past the portrait still scrolls the page normally.
+  frame.addEventListener('touchstart', (e) => track(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+  frame.addEventListener('touchmove',  (e) => track(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+  frame.addEventListener('touchend', release);
+  frame.addEventListener('touchcancel', release);
 
   // Resume, or build for the first time if the tab was hidden at load.
   const resume = () => {
