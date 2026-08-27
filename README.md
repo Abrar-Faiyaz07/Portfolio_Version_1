@@ -24,7 +24,9 @@ from packages. It ships as three static files that any host can serve.
 | Behaviour | `script.js` — content registry + all interaction |
 | Assets | `uploads/` |
 | Resume | `resume.pdf` |
-| Process docs | `docs/` |
+| Assignment report | [`REPORT.md`](REPORT.md) — comprehensive engineering & design report |
+| Process & AI disclosure | [`docs/AI-USAGE.md`](docs/AI-USAGE.md) |
+| Architectural blueprint | [`docs/architecture/`](docs/architecture/) — 9-part system specification |
 
 ## Features
 

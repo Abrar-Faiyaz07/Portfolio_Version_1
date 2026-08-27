@@ -29,11 +29,10 @@ const LINKS = {
 };
 
 const TYPE_ROLES = [
-  'software that ships.',
   'games from scratch.',
-  'embedded systems.',
-  'data-driven tools.',
-  'AI-driven solutions.',
+  'small tools I actually use.',
+  'things on breadboards.',
+  'AI side projects.',
 ];
 
 const CURRENT_STACK = ['C', 'C++', 'Java', 'Python', 'JavaScript', 'React', 'Node.js', 'Git', 'SQL', 'PostgreSQL', 'MySQL'];
@@ -55,12 +54,12 @@ const TECH_LOGOS = {
 };
 
 const EXPLORING = [
-  'Artificial Intelligence & Machine Learning',
-  'Generative AI & Prompt Engineering',
-  'Embedded Systems & Robotics',
-  'Competitive Programming',
-  'Game Development',
-  'System Design',
+  'AI & machine learning',
+  'Generative AI',
+  'Robotics & embedded',
+  'Competitive programming',
+  'Game dev',
+  'System design',
 ];
 
 const EDUCATION = [
@@ -69,21 +68,21 @@ const EDUCATION = [
     title: 'BSc in Computer Science & Engineering',
     org: 'Islamic University of Technology · Gazipur, Bangladesh',
     meta: 'In progress · 2nd year',
-    note: 'Core CSE curriculum with a self-directed focus on AI/ML and generative AI. Active in the Robotics Society R&D Panel and the Al Biruni Research Society alongside coursework.',
+    note: 'Core CSE curriculum, with AI and ML on the side. Also on the Robotics Society R&D Panel.',
   },
   {
     date: '2021 — 2023',
     title: 'Higher Secondary Certificate (HSC)',
     org: 'Ibne Taimiya School and College · Cumilla, Bangladesh',
     meta: 'GPA 5.00 / 5.00',
-    note: 'Science group. First sustained programming work, and the point the engineering path was decided.',
+    note: 'Science group. Where I started writing code properly.',
   },
   {
     date: '2016 — 2021',
     title: 'Secondary School Certificate (SSC)',
     org: 'Ibne Taimiya School and College · Cumilla, Bangladesh',
     meta: 'GPA 4.86 / 5.00',
-    note: 'First exposure to C and to structured problem solving.',
+    note: 'First look at C.',
   },
 ];
 
@@ -95,9 +94,8 @@ const EXPERIENCE = [
     org: 'Research & Development Panel',
     date: '2025 — present',
     bullets: [
-      'Sit on the R&D Panel, helping plan and run hands-on robotics and hardware sessions for fellow students.',
-      'Built and debugged Arduino projects with the team, from wiring through to firmware.',
-      'Completed the Basic Arduino & Robotics workshop run by the IEEE RAS IUT Student Branch Chapter.',
+      'On the R&D Panel, helping run hands-on robotics sessions for other students.',
+      'Built and debugged Arduino projects with the team, wiring through to firmware.',
     ],
   },
   {
@@ -107,8 +105,8 @@ const EXPERIENCE = [
     org: 'Al Biruni Research Society, IUT',
     date: '2025 — present',
     bullets: [
-      'Part of the executive body of IUT\'s research-focused student society.',
-      'Exposure to how academic research is scoped, reviewed and presented — groundwork for research assistantship work later in the degree.',
+      'Part of the executive body of IUT\'s research society.',
+      'Learning how research gets scoped, reviewed and presented.',
     ],
   },
   {
@@ -118,9 +116,8 @@ const EXPERIENCE = [
     org: 'IUT Computer Society (IUTCS)',
     date: '2025',
     bullets: [
-      'Volunteered across multiple IUTCS events with event coordination and participant handling.',
-      'On-ground support during contest days: registration, logistics, and problem-desk runs.',
-      'Handled production of posters, crests and other event materials.',
+      'Event coordination and participant handling across several IUTCS events.',
+      'Contest-day support: registration, logistics, problem desk. Also made the posters and crests.',
     ],
   },
   {
@@ -130,29 +127,29 @@ const EXPERIENCE = [
     org: 'Inter University Programming Contest',
     date: '2025',
     bullets: [
-      'Competed as part of a three-person team at the Inter University Programming Contest hosted at IUT.',
-      'Finished 26th overall, competing under contest time constraints against teams from other universities.',
+      'Competed in a three-person team at the Inter University Programming Contest hosted at IUT.',
+      'Finished 26th out of the field.',
     ],
   },
 ];
 
 const PROJECTS = [
-  { id: 1, title: 'The Nightfall',       desc: 'A 2D action-platformer with boss encounters across a jungle and a cyberpunk city, written from scratch in C with Raylib.', tags: ['C', 'Raylib', 'Game Dev'], lang: 'C',      link: GH + 'Project-Nightfall', featured: true },
-  { id: 2, title: 'The Infected Hours',  desc: '2D arcade survival game built in Java for a university project — sprite handling, collision and game loop all hand-rolled.',                tags: ['Java', 'Game Dev'],        lang: 'Java',   link: GH + 'The-Infected-Hours', featured: true },
-  { id: 3, title: 'Coders of Dhaka',     desc: 'A pure-Python parser for raw, unstructured Instagram profile dumps — cleans text, normalises metrics (12.5K → 12500) and answers descriptive queries with custom search. Zero external libraries.', tags: ['Python', 'Parsing'], lang: 'Python', link: GH + 'Codera_of_Dhaka', featured: true },
-  { id: 4, title: 'People You May Know', desc: 'A social-network recommendation engine in core Python: mutual-connection analysis over a graph to suggest friends and pages, implemented with the standard library only.',                                   tags: ['Python', 'Graphs'],  lang: 'Python', link: GH + 'People-You-May-Know-A-Python-Recommendation-Engine', featured: true },
-  { id: 5, title: 'Team Beetles',           desc: 'Collaborative university team project in Python.',                     tags: ['Python', 'Team'], lang: 'Python', link: GH + 'Team_Beetles' },
-  { id: 6, title: 'Visual Programming Lab', desc: 'CSE 4402 coursework — JavaFX exercises covering UI layout, events and data binding.', tags: ['Java', 'JavaFX'], lang: 'Java', link: GH + 'CSE_4402_VisualProgrammingLab' },
-  { id: 7, title: 'COA Assignment 2',       desc: 'Computer Organization & Architecture coursework — instruction-level work in C++.',    tags: ['C++', 'Systems'], lang: 'C++',  link: GH + 'COA_Assignment2_project' },
-  { id: 8, title: 'CSE4302 Lab Project',    desc: 'Data structures and algorithms lab project built in C++.',             tags: ['C++', 'DSA'],     lang: 'C++',  link: GH + 'CSE4302_LabProject' },
-  { id: 9, title: 'CSE4302 Labs',           desc: 'Full set of lab exercises from the CSE4302 course.',                   tags: ['C++', 'Coursework'], lang: 'C++', link: GH + 'CSE4302_Labs' },
+  { id: 1, title: 'The Nightfall',       desc: '2D action-platformer in C with Raylib. Jungle and cyberpunk levels, with boss fights.', tags: ['C', 'Raylib', 'Game Dev'], lang: 'C',      link: GH + 'Project-Nightfall', featured: true },
+  { id: 2, title: 'The Infected Hours',  desc: '2D arcade survival game in Java. Sprites, collision and the game loop written by hand.', tags: ['Java', 'Game Dev'],        lang: 'Java',   link: GH + 'The-Infected-Hours', featured: true },
+  { id: 3, title: 'Coders of Dhaka',     desc: 'Python parser for messy Instagram profile dumps. Cleans the text, fixes the numbers (12.5K → 12500) and answers queries. No libraries.', tags: ['Python', 'Parsing'], lang: 'Python', link: GH + 'Codera_of_Dhaka', featured: true },
+  { id: 4, title: 'People You May Know', desc: 'Friend and page suggestions from mutual connections in a graph. Standard library only.', tags: ['Python', 'Graphs'],  lang: 'Python', link: GH + 'People-You-May-Know-A-Python-Recommendation-Engine', featured: true },
+  { id: 5, title: 'Team Beetles',           desc: 'University team project in Python.',                     tags: ['Python', 'Team'], lang: 'Python', link: GH + 'Team_Beetles' },
+  { id: 6, title: 'Visual Programming Lab', desc: 'CSE 4402 coursework. JavaFX layouts, events and data binding.', tags: ['Java', 'JavaFX'], lang: 'Java', link: GH + 'CSE_4402_VisualProgrammingLab' },
+  { id: 7, title: 'COA Assignment 2',       desc: 'Computer Organization & Architecture coursework in C++.',    tags: ['C++', 'Systems'], lang: 'C++',  link: GH + 'COA_Assignment2_project' },
+  { id: 8, title: 'CSE4302 Lab Project',    desc: 'Data structures and algorithms lab project in C++.',             tags: ['C++', 'DSA'],     lang: 'C++',  link: GH + 'CSE4302_LabProject' },
+  { id: 9, title: 'CSE4302 Labs',           desc: 'All the lab exercises from CSE4302.',                   tags: ['C++', 'Coursework'], lang: 'C++', link: GH + 'CSE4302_Labs' },
 ];
 
 const CAROUSEL = [
-  { img: 'uploads/pasted-1784363735234-0.jpg', title: 'The Nightfall',       tag: 'C · Raylib · custom engine',      desc: 'Boss encounters across two hand-built worlds, with the render loop, collision and state machine written directly in C.', link: GH + 'Project-Nightfall' },
-  { img: 'uploads/PeopleMayYouKnowEdited.jpg', title: 'People You May Know', tag: 'Python · graph algorithms',       desc: 'Mutual-connection analysis over a social graph — friend and page recommendations with no external libraries.', link: GH + 'People-You-May-Know-A-Python-Recommendation-Engine' },
-  { img: 'uploads/CoderOfDhakaEdited.jpg',     title: 'Coders of Dhaka',     tag: 'Python · parsing · search',       desc: 'Turns messy scraped profile text into structured, queryable data using only the standard library.', link: GH + 'Codera_of_Dhaka' },
-  { img: 'uploads/infectedHourEdited.jpg',     title: 'The Infected Hours',  tag: 'Java · 2D arcade',                desc: 'A survival arcade game built for a university project — collision, sprites and state machine by hand.', link: GH + 'The-Infected-Hours' },
+  { img: 'uploads/pasted-1784363735234-0.jpg', title: 'The Nightfall',       tag: 'C · Raylib · custom engine',      desc: 'Render loop, collision and state machine written directly in C.', link: GH + 'Project-Nightfall' },
+  { img: 'uploads/PeopleMayYouKnowEdited.jpg', title: 'People You May Know', tag: 'Python · graph algorithms',       desc: 'Mutual-connection analysis over a social graph. No external libraries.', link: GH + 'People-You-May-Know-A-Python-Recommendation-Engine' },
+  { img: 'uploads/CoderOfDhakaEdited.jpg',     title: 'Coders of Dhaka',     tag: 'Python · parsing · search',       desc: 'Turns messy scraped profile text into data you can query.', link: GH + 'Codera_of_Dhaka' },
+  { img: 'uploads/infectedHourEdited.jpg',     title: 'The Infected Hours',  tag: 'Java · 2D arcade',                desc: 'Survival arcade game for a university project. Collision and sprites by hand.', link: GH + 'The-Infected-Hours' },
 ];
 
 const SHOTS = [
@@ -190,9 +187,9 @@ const TECH = [
 ];
 
 const CERTIFICATES = [
-  { title: 'AI+ Prompt Engineer Level 1™', issuer: 'AI CERTs™',           date: 'Valid Aug 2025 — Aug 2026', badge: 'blockchain-verified', note: 'Prompt engineering and generative AI.' },
-  { title: 'AgentX: Build Your Own Agent', issuer: 'NetCom Learning',     date: 'Sep 2025',                  badge: 'hands-on',            note: 'AI agent design, chatbot development, conversational AI.' },
-  { title: 'Basic Arduino & Robotics',     issuer: 'IEEE RAS IUT SBC',    date: 'Nov 2024 — Feb 2025',       badge: 'workshop',            note: 'Arduino programming, robotics fundamentals, embedded systems.' },
+  { title: 'AI+ Prompt Engineer Level 1™', issuer: 'AI CERTs™',           date: 'Valid Aug 2025 — Aug 2026', badge: 'blockchain-verified', note: 'Prompt engineering, generative AI.' },
+  { title: 'AgentX: Build Your Own Agent', issuer: 'NetCom Learning',     date: 'Sep 2025',                  badge: 'hands-on',            note: 'Agent design and chatbots.' },
+  { title: 'Basic Arduino & Robotics',     issuer: 'IEEE RAS IUT SBC',    date: 'Nov 2024 — Feb 2025',       badge: 'workshop',            note: 'Arduino and robotics basics.' },
 ];
 
 const PC_SPECS = [
@@ -207,21 +204,21 @@ const PC_SPECS = [
 ];
 
 const CP_PLATFORMS = [
-  { mark: 'CF', name: 'Codeforces', sub: 'contests & problem archive', url: LINKS.codeforces, color: '#FF6B7A' },
-  { mark: 'LC', name: 'LeetCode',   sub: 'daily problem practice',     url: LINKS.leetcode,   color: '#FFB86B' },
+  { mark: 'CF', name: 'Codeforces', sub: 'contests', url: LINKS.codeforces, color: '#FF6B7A' },
+  { mark: 'LC', name: 'LeetCode',   sub: 'daily problems', url: LINKS.leetcode,   color: '#FFB86B' },
 ];
 
 const PHOTOS = [
-  { src: 'uploads/1.jpg', cap: 'IUT campus · golden hour' },
-  { src: 'uploads/2.jpg', cap: 'Between classes' },
-  { src: 'uploads/3.jpg', cap: 'Campus, quiet side' },
+  { src: 'uploads/1.jpg', cap: 'IUT campus' },
+  { src: 'uploads/2.jpg', cap: 'Around campus' },
+  { src: 'uploads/3.jpg', cap: 'Campus, evening' },
 ];
 
 const ROADMAP = [
-  { when: 'next semester', title: 'Machine learning coursework', text: 'Formal ML modules begin next term, each paired with an applied project rather than problem sets alone.' },
-  { when: 'in progress',   title: 'Research involvement',        text: 'Working toward a research assistantship through the Al Biruni Research Society. Nothing published yet — this section updates when that changes.' },
-  { when: 'ongoing',       title: 'Autonomous robotics',         text: 'Moving beyond workshop builds into sensor fusion and closed-loop control with the R&D Panel.' },
-  { when: 'this year',     title: 'Open-source contribution',    text: 'Every repository listed here is my own. Contributing to an established codebase is the next step.' },
+  { when: 'next semester', title: 'Machine learning coursework', text: 'ML modules start next term. I want to build something with each one.' },
+  { when: 'in progress',   title: 'Research involvement',        text: 'Going for a research assistantship through the Al Biruni Research Society. Nothing published yet.' },
+  { when: 'ongoing',       title: 'Autonomous robotics',         text: 'Past workshop builds, into sensor fusion and closed-loop control.' },
+  { when: 'this year',     title: 'Open-source contribution',    text: 'Everything here is my own repo. Next is contributing to someone else\'s.' },
 ];
 
 const ACHIEVEMENTS = {
@@ -1282,7 +1279,7 @@ function initModal() {
     setTimeout(() => {
       submit.innerHTML = 'Send message <span class="btn-arrow">→</span>';
       submit.disabled = false;
-      $('#thanks-msg').textContent = `Thanks, ${name}. This form has no backend yet, so please also email ${LINKS.email} to make sure the message reaches me.`;
+      $('#thanks-msg').textContent = `Thanks, ${name}. There's no backend on this form yet, so please also email ${LINKS.email}.`;
       modal.classList.add('sent');
     }, 600);
   });
@@ -1422,10 +1419,8 @@ function consoleBanner() {
   );
   console.log('%cAbrar Faiyaz — CSE @ IUT', 'color:#4FE3C1;font-weight:bold;font-size:14px');
   console.log(
-    `%cYou opened the console. Good instinct.
-This site is hand-written HTML/CSS/JS — no framework, no build step.
-Source: ${LINKS.github}
-Hiring, research, or a project idea? ${LINKS.email}
+    `%cSource: ${LINKS.github}
+Mail: ${LINKS.email}
 Try the Konami code. Or Fun Mode.`,
     'color:#9AA3B8;font-family:monospace;line-height:1.6'
   );
