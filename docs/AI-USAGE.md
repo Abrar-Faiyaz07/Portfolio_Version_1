@@ -29,13 +29,13 @@ physics simulation for the platformer.
 Chronological. Paraphrased where the original was shorthand; intent preserved.
 
 ### 1 — Initial build
-> Go to `PlannedWithClaudeDesign/portfolio`. Read the full planning and implement
+> Go to `PlannedWithClaudeDesign/portfolio` (the initial conceptual tablet design plan is located at `docs/architecture/initial-tablet-design-plan.pdf`). Read the full planning and implement
 > the code. Make it advanced and polished, add more design animation, hero styled
 > like a top award-winning portfolio, click effects on everything. Create a file to
 > trace progress. Look at the other portfolios in the parent folders and take
 > inspiration to make mine better.
 
-Result: read all 9 planning docs + the real CV; rebuilt `dist/` end-to-end against
+Result: read all 9 planning docs + the initial tablet design plan (`initial-tablet-design-plan.pdf`) + the real CV; rebuilt `dist/` end-to-end against
 the "Ink & Signal" blueprint; 11 sections; ported the ASCII-portrait technique from
 the reference repo; created `PROGRESS.md`.
 

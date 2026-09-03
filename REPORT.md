@@ -139,6 +139,7 @@ Portfolio_Version_1/
 ├── docs/
 │   ├── AI-USAGE.md               # Detailed AI disclosure & chronological prompt history
 │   └── architecture/             # Complete 9-part architectural blueprint & specifications
+│       ├── initial-tablet-design-plan.pdf # Original handwritten tablet wireframes & sketches
 │       ├── 00-README.md          # Architecture index
 │       ├── 01-vision-personas-journeys.md
 │       ├── 02-information-architecture.md

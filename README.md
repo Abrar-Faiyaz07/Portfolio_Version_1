@@ -26,6 +26,7 @@ from packages. It ships as three static files that any host can serve.
 | Resume | `resume.pdf` |
 | Assignment report | [`REPORT.md`](REPORT.md) — comprehensive engineering & design report |
 | Process & AI disclosure | [`docs/AI-USAGE.md`](docs/AI-USAGE.md) |
+| Initial tablet design plan | [`docs/architecture/initial-tablet-design-plan.pdf`](docs/architecture/initial-tablet-design-plan.pdf) — handwritten concept wireframes & design sketches |
 | Architectural blueprint | [`docs/architecture/`](docs/architecture/) — 9-part system specification |
 
 ## Features
